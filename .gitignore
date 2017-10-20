@@ -1,3 +1,5 @@
+.DS_Store
+
 # Ignore tout à la racine, sauf .gitignore et "wp-content"
 *
 !.gitignore
@@ -10,6 +12,9 @@
 !wp-content/themes/**
 !wp-content/mu-plugins
 !wp-content/mu-plugins/**
+
+# Dependencies
+wp-content/themes/ghibli/node_modules
 
 # Build folder
 wp-content/themes/ghibli/dist/
