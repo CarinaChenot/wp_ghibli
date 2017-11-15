@@ -11,11 +11,12 @@ $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 <?php while ( have_posts() ) : the_post(); ?>
 
 <section class="hero" style="background-image: url('<?= $url ?>')">
-  <img src="<?php the_field('hero_logo'); ?>">
+  <img class="hero-logo" src="<?php the_field('hero_logo'); ?>">
   <a class="hero-cta" href="<?= THEME_URL . '/a-propos' ?>">Découvrir l'univers</a>
 </section>
 
 <section class="quote">
+  <?php include THEME_PATH . '/dist/img/quote.svg' ?>
   <p class="quote-text">
     <?php the_field('quote') ?>
   </p>
