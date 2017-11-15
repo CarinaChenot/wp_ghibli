@@ -44,6 +44,9 @@
   transition all 0.3s ease-in-out
   overflow hidden
 
+  +max(small)
+    width calc(100% - 20vw)
+
   &:hover
     width 593px
 
@@ -56,3 +59,11 @@
     position absolute
     white-space nowrap
     right 108px
+
+    +max(small)
+      position static
+
+  +max(small)
+    letter-spacing 1px
+    font-weight normal
+    font-size 15px

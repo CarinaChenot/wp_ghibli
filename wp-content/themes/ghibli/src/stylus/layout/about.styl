@@ -1,17 +1,36 @@
 .about
   display flex
-  align-items center
+  align-items stretch
   background-color #1c1b1b
-  position relative
+
+  +max(small)
+    flex-direction column-reverse
+    font-size 19px
+    background-color transparent
 
 .about-image
   max-width 30%
 
+  +max(small)
+    max-width 100%
+
   img
     width 100%
 
-.about-text
+.about-content
+  position relative
   padding 0 13vw
+
+  +max(small)
+    margin-bottom 2.7em
+    background-color #1c1b1b
+    padding 2em 13vw 4em
+
+.about-text
+  height 100%
+  display flex
+  flex-direction column
+  justify-content center
 
 .about-title
   font-size 30px
@@ -19,10 +38,16 @@
   color #eaeaea
   font-weight normal
 
+  +max(small)
+    font-size 19px
+
 .about-paragraph
   font-size 20px
   line-height 1.75
   color #d1d1d1
+
+  +max(small)
+    font-size 15px
 
 .about-cta
   right site-margin
