@@ -1,0 +1,50 @@
+$movieBg
+  content ''
+  position absolute
+  background-color #f8f8f8
+  height 948px
+  width 100%
+  top 0
+  left 0
+  z-index -1
+
+.recent-movies
+  display flex
+  flex-direction column
+  padding 5em 0 7.2em
+  position relative
+
+  &::before
+    @extends $movieBg
+
+  .movie
+    display flex
+    flex-direction column
+
+    .movie-image
+      align-self flex-end
+
+    .movie-cta
+      right site-margin
+
+    &:nth-child(even)
+      text-align right
+      align-items flex-end
+
+      .movie-image
+        align-self flex-start
+
+      .movie-cta
+        left site-margin
+
+    &:not(:first-child)
+      position relative
+      padding-top 5em
+
+      &::before
+        @extends $movieBg
+
+  .movie-title,
+  .movie-year,
+  .movie-excerpt
+    padding 0 site-margin

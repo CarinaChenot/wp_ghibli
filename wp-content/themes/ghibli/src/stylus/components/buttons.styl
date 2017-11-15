@@ -67,3 +67,34 @@
     letter-spacing 1px
     font-weight normal
     font-size 15px
+
+.all-movies
+  margin auto
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform uppercase
+  text-decoration none
+  padding 1em 2.2em 0.8em
+  color #71cf7c
+  border solid 2px #71cf7c
+  position relative
+
+  &::after
+    content ''
+    background #71cf7c
+    position absolute
+    width 100%
+    height 100%
+    bottom 0
+    left 0
+    z-index -1
+    transform scaleY(0)
+    transform-origin bottom
+    transition transform 0.3s ease-in-out
+
+  &:hover
+    color white
+
+    &::after
+      transform scaleY(1)
+

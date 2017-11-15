@@ -25,6 +25,8 @@ $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 
 <?php include 'templates/home/famous-movies.php'; ?>
 
+<?php include 'templates/home/recent-movies.php'; ?>
+
 <section class="about">
   <div class="about-image">
     <img src="<?= THEME_URL . '/dist/img/miyasaki.jpeg' ?>">
