@@ -21,8 +21,9 @@ $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
     <?php the_field('quote') ?>
   </p>
   <span class="quote-author"><?php the_field('quote_author') ?></span>
-
 </section>
+
+<?php include 'templates/home/famous-movies.php'; ?>
 
 <section class="about">
   <div class="about-image">
