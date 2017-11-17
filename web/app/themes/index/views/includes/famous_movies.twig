@@ -6,8 +6,9 @@
 		<div class="movie-item" style="background-image: url('{{ TimberImage(movie) }}')">
 			<div class="movie-content">
 				<h3 class="movie-item-title">{{ movie.post_title }}</h3>
-				<p class="movie-item-text">{{ movie.post_content }}</p>
+				<p class="movie-item-text">{{ movie.post_excerpt }}</p>
 				{% if loop.index0 == 0 %}
+				{# TODO: Put movie link #}
 				<a href="#" class="movie-cta">
 					{% include '/dist/img/right-arrow.svg.twig' %}
 				</a>
