@@ -2,6 +2,10 @@
 .DS_Store
 .idea
 
+# Config
+web/.htaccess
+.env
+
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
@@ -22,5 +26,3 @@ composer.lock
 node_modules
 web/app/themes/index/dist/*
 !web/app/themes/index/dist/.gitkeep
-web/.htaccess
-.env
