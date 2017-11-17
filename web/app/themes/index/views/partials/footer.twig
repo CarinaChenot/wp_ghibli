@@ -3,6 +3,15 @@
 		<div class="logo">
 			<img src="{{ theme.uri }}/dist/img/totoro.jpg">
 		</div>
+		{% if mainMenu %}
+		<nav class="menu">
+			{% for link in mainMenu.get_items %}
+			<a class="{{link.classes | join(' ')}}" href="{{ link.url }}">
+				{{ link }}
+			</a>
+			{% endfor %}
+		</nav>
+		{% endif %}
 		<ul class="social-list">
 			<li class="social-item">
 				{% include '/dist/img/facebook.svg.twig' %}

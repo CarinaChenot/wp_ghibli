@@ -6,14 +6,24 @@
   font-size 1rem
   text-transform uppercase
 
+  .footer &
+    font-size 15px
+    color dark
+
   .menu-item
     color inherit
     text-decoration none
     padding 0 2em
 
-    &:not(:last-child)
-      border-right solid 1px #cbcbcb
+    .footer &
+      padding 0 2.5em
+      letter-spacing 1.1px
 
-    &.current_page_item,
-    &:hover
-      font-weight 900
+    .main-header &
+      &:not(:last-child)
+        border-right solid 1px #cbcbcb
+
+      &.current_page_item,
+      &:hover
+        font-weight 900
+
