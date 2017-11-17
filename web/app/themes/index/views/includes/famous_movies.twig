@@ -2,32 +2,19 @@
 	<hr class="section-stroke">
 	<h2 class="section-title">Œuvres populaires</h2>
 	<div class="movies-grid">
-		<div class="movie-item" style="background-image: url('{{ theme.uri }}/dist/img/chichiro-bg.jpg')">
+		{% for movie in acf.famous_movies %}
+		{# TODO: Afficher le thumbnail de la movie #}
+		<div class="movie-item" style="background-image: url('{{ Image(movie.post_ID).src }}')">
 			<div class="movie-content">
-				<h3 class="movie-item-title">Le voyage de Chichiro</h3>
-				<p class="movie-item-text">
-					Chihiro, une fillette de dix ans, alors qu'elle se rend en famille dans sa nouvelle maison, entre dans le monde des esprits.
-				</p>
+				<h3 class="movie-item-title">{{ movie.post_title }}</h3>
+				<p class="movie-item-text">{{ movie.post_content }}</p>
+				{% if loop.index0 == 0 %}
 				<a href="#" class="movie-cta">
-						{% include '/dist/img/right-arrow.svg.twig' %}
+					{% include '/dist/img/right-arrow.svg.twig' %}
 				</a>
+				{% endif %}
 			</div>
 		</div>
-		<div class="movie-item" style="background-image: url('{{ theme.uri }}/dist/img/chichiro-bg.jpg')">
-			<div class="movie-content">
-				<h3 class="movie-item-title">Le voyage de Chichiro</h3>
-				<p class="movie-item-text">
-					Chihiro, une fillette de dix ans, alors qu'elle se rend en famille dans sa nouvelle maison, entre dans le monde des esprits.
-				</p>
-			</div>
-		</div>
-		<div class="movie-item" style="background-image: url('{{ theme.uri }}/dist/img/chichiro-bg.jpg')">
-			<div class="movie-content">
-				<h3 class="movie-item-title">Le voyage de Chichiro</h3>
-				<p class="movie-item-text">
-					Chihiro, une fillette de dix ans, alors qu'elle se rend en famille dans sa nouvelle maison, entre dans le monde des esprits.
-				</p>
-			</div>
-		</div>
+		{% endfor %}
 	</div>
 </section>

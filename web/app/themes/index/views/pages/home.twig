@@ -3,17 +3,16 @@
 {% block content %}
 
 	<section class="hero" style="background-image: url('<?= $url ?>')">
-		<img class="hero-logo" src="<?php the_field('hero_logo'); ?>">
+		<img class="hero-logo" src="{{ acf.hero_logo }}">
 		<a class="hero-cta" href="{{ theme.uri }}/a-propos">Découvrir l'univers</a>
 	</section>
 
 	<section class="quote">
 		{% include '/dist/img/quote.svg.twig' %}
 		<p class="quote-text">
-			{#<?php the_field('quote') ?>#}
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium aspernatur distinctio
+			{{ acf.quote }}
 		</p>
-		<span class="quote-author">mymy lebeaugosse</span>
+		<span class="quote-author">{{ acf.quote_author }}</span>
 	</section>
 
 	{% include './includes/famous_movies.twig' %}
