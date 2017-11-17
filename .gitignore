@@ -22,3 +22,5 @@ composer.lock
 node_modules
 web/app/themes/index/dist/*
 !web/app/themes/index/dist/.gitkeep
+web/.htaccess
+.env
