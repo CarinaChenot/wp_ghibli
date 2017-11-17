@@ -1,0 +1,24 @@
+{% include '/partials/head.twig' %}
+<body class="{{ body_class }}">
+
+<header class="main-header">
+    {% for link in mainMenu.get_items %}
+        <li class="header_item">
+            <a class="header_link {{link.classes | join(' ')}}" href="{{ link.url }}">
+                {{ link }}
+            </a>
+            {% if link.children %}
+                <div class="header_subnav {% if link.children|length > 4 %}header_subnav-big{% endif %}{% if link.children[1].children|length > 1 %}header_subnav-big{% endif %}">
+                    {% for child in link.children %}
+                        <a class="header_subnavLink {{child.classes | join(' ')}}" href="{{ child.url }}">{{ child }}</a>
+                        {% for baby in child.children %}
+                            <a class="header_subsubnavLink {{baby.classes | join(' ')}}" href="{{ baby.link }}">{{ baby }}</a>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </li>
+    {% endfor %}
+</header>
+
+

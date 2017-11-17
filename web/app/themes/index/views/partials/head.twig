@@ -1,0 +1,17 @@
+<!doctype html>
+<html class="no-js" id="html">
+
+<head>
+    <meta charset="{{site.charset}}">
+    <title>
+        {% if wp_title %}
+            {{ wp_title }} - {{ site.name }}
+        {% else %}
+            {{ site.name }}
+        {% endif %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ site.link }}/style.css">
+
+    {{wp_head}}
+</head>

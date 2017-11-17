@@ -1,0 +1,42 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+  <section class="hero" style="background-image: url('<?= $url ?>')">
+    <img class="hero-logo" src="<?php the_field('hero_logo'); ?>">
+    <a class="hero-cta" href="{{ theme.uri }}/a-propos">Découvrir l'univers</a>
+  </section>
+
+  <section class="quote">
+    {% include '/dist/img/quote.svg.twig' %}
+    <p class="quote-text">
+      {#<?php the_field('quote') ?>#}
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium aspernatur distinctio
+    </p>
+    <span class="quote-author">mymy lebeaugosse</span>
+  </section>
+
+  {% include './includes/famous_movies.twig' %}
+
+  {% include './includes/recent_movies.twig' %}
+
+  <section class="about">
+    <div class="about-image">
+      <img src="{{ theme.uri }}/dist/img/miyasaki.jpeg">
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <h3 class="about-title">Découvrez toute l’histoire du studio et de ses grands fondateurs.</h3>
+        <p class="about-paragraph">
+          Le studio Ghibli est un studio d'animation japonais, il a été officiellement fondé, par Hayao Miyazaki et Isao Takahata. Il produit des films d'animation japonais, longs-métrages et courts-métrages, ainsi que des téléfilms, des séries d'animation et des jeux vidéo, dans une moindre mesure.
+        </p>
+      </div>
+      <a href="#" class="btn-scale about-cta">
+        <span class="about-cta-text">À propos de nous</span>
+          {% include '/dist/img/right-arrow.svg.twig' %}
+      </a>
+    </div>
+  </section>
+
+
+{% endblock %}

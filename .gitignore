@@ -1,20 +1,24 @@
+*.log
 .DS_Store
+.idea
 
-# Ignore tout à la racine, sauf .gitignore et "wp-content"
-*
-!.gitignore
-!wp-content
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
 
-# Ignore le contenu de "wp-content" sauf "plugins", "themes" et "mu-plugins"
-!wp-content/plugins
-!wp-content/plugins/**
-!wp-content/themes
-!wp-content/themes/**
-!wp-content/mu-plugins
-!wp-content/mu-plugins/**
+# WordPress
+web/wp
 
-# Dependencies
-wp-content/themes/ghibli/node_modules
+# Composer
+vendor/*
+!vendor/.gitkeep
+composer.lock
 
-# Build folder
-wp-content/themes/ghibli/dist/
+# Gulp
+node_modules
+web/app/themes/index/dist/*
+!web/app/themes/index/dist/.gitkeep

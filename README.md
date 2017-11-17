@@ -1,17 +1,24 @@
-# wp_ghibli
-A Studio Ghibli Wordpress website
+# wordpress-starter
 
-## Installation
-```sh
-# Clone the repo
-git clone https://github.com/CarinaChenot/wp_ghibli.git
+A wordpress starter for all project based on wordpress
 
-# Go to the theme folder
-cd wp-content/themes/wp_ghibli
+## Getting Started
 
-# Install dependencies
-yarn
+This Wordpress starter is an all in one built for classical Wordpress website
 
-# Build assets
-gulp
+## Plugin wordpress
+
+* ACF
+
+### Installing
+
+In first install your php library with composer
+
 ```
+composer install
+```
+
+
+## Built With
+
+* [Bedrock](https://github.com/roots/bedrock) - The WordPress boilerplate used
