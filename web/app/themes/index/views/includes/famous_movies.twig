@@ -3,8 +3,7 @@
 	<h2 class="section-title">Œuvres populaires</h2>
 	<div class="movies-grid">
 		{% for movie in acf.famous_movies %}
-		{# TODO: Afficher le thumbnail de la movie #}
-		<div class="movie-item" style="background-image: url('{{ Image(movie.post_ID).src }}')">
+		<div class="movie-item" style="background-image: url('{{ TimberImage(movie) }}')">
 			<div class="movie-content">
 				<h3 class="movie-item-title">{{ movie.post_title }}</h3>
 				<p class="movie-item-text">{{ movie.post_content }}</p>
