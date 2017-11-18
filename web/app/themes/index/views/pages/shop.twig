@@ -1,0 +1,44 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<section class="famous-articles">
+	<hr class="section-stroke">
+	<h2 class="section-title">Articles populaires</h2>
+	<div class="articles-grid">
+		{% for i in 0..4 %}
+		{# TODO: Add "has-promo" class if has promo category#}
+		<article class="article has-promo">
+			<div class="article-image">
+				{# <img src="" alt=""> #}
+			</div>
+			<div class="article-description">
+				<span class="article-type">T-shirt</span>
+				<span class="article-name">Studio Ghibli - Totoro</span>
+				<span class="article-price">14,99€</span>
+			</div>
+		</article>
+		{% endfor %}
+	</div>
+</section>
+
+<section class="shop">
+	<hr class="section-stroke">
+	<h2 class="section-title">Boutique</h2>
+	<div class="articles-grid">
+		{% for i in 0..19 %}
+		{# TODO: Add "has-promo" class if has promo category#}
+		<article class="article has-promo">
+			<div class="article-image">
+				{# <img src="" alt=""> #}
+			</div>
+			<div class="article-description">
+				<span class="article-type">T-shirt</span>
+				<span class="article-name">Studio Ghibli - Totoro</span>
+				<span class="article-price">14,99€</span>
+			</div>
+		</article>
+		{% endfor %}
+	</div>
+</section>
+{% endblock %}

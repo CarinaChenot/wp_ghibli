@@ -4,6 +4,7 @@ const autoprefixer = require('gulp-autoprefixer')
 const rename = require('gulp-rename')
 const babel = require('gulp-babel')
 const stylus = require('gulp-stylus')
+const imagemin = require('gulp-imagemin')
 const del = require('del')
 
 const paths = {

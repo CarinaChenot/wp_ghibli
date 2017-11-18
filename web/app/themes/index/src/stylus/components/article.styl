@@ -1,0 +1,36 @@
+.article
+  .article-image
+    background red
+    height 250px
+    width 200px
+    position relative
+
+  &.has-promo .article-image::after
+    content ''
+    position absolute
+    width: 0;
+    height: 0;
+    right 0
+    border: 0 solid transparent;
+    border-left-width: 2em;
+    border-top: 2em solid greenish;
+
+  .article-description
+    display flex
+    flex-direction column
+    padding 1em
+    background-color white
+
+    > *
+      display inline
+
+  .article-type
+    text-transform uppercase
+
+  .article-name
+    font-family secondary-font
+    font-weight bold
+
+  .article-price
+    margin-top 0.7em
+    align-self flex-end
