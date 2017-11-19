@@ -1,0 +1,102 @@
+{% set containerClass = 'page-about' %}
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="page-hero">
+	<h1 class="page-title">Le <br>studio Ghibli</h1>
+	<span class="arrow">{% include '/dist/img/right-arrow.svg' %}</span>
+</div>
+<section class="about-bio">
+	<div class="about-bio-image">
+		<img src="{{ theme.uri }}/dist/img/ghibli_museum.jpg" alt="">
+	</div>
+	<div class="about-bio-wrapper">
+		<div class="about-bio-item">
+			<h3 class="about-bio-title">Fondateurs / Représentants</h3>
+			<ul>
+				<li>Hayao Miyazaki</li>
+				<li>Isao Takahata</li>
+				<li>Koji Hoshino</li>
+				<li>Toshio Suzuki</li>
+			</ul>
+		</div>
+		<div class="about-bio-item">
+			<h3 class="about-bio-title">Localisation</h3>
+			<ul>
+				<li>Koganei, Japon</li>
+				<li><a href="">Voir la carte</a></li>
+			</ul>
+		</div>
+		<div class="about-bio-item">
+			<h3 class="about-bio-title">Création</h3>
+			<ul>
+				<li>15 Juin 1985</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="quote">
+	{% include '/dist/img/quote.svg.twig' %}
+	<p class="quote-text">
+		Je crois au pouvoir de l'histoire. Je crois que les histoires ont un rôle important à jouer dans la formation des êtres humains, qu'elles peuvent stimuler, étonner et inspirer leurs auditeurs
+	</p>
+	<span class="quote-author">Hayao Miyazaki</span>
+</section>
+
+<section class="about-section">
+	<h2 class="section-title">Origines</h2>
+	<p class="section-text">
+		Le studio existait depuis longtemps dans l'esprit de Hayao Miyazaki et Isao Takahata, deux visionnaires qui ont su rester fidèles à leurs principes. L’histoire du studio Ghibli commence en réalité à la fin des années 50. Isao Takahata entre au studio Tôei Dôga (futur Tôei Animation) en 1959 et Hayao Miyazaki en 1963. Tous deux appartiennent au même syndicat, Takahata en étant le vice-président et Miyazaki le secrétaire général. Après la réalisation de Taiyô no Ôji : Horusu no Daibôken (Horus, prince du soleil), tous deux quittent la Tôei et intègrent un autre studio, où Takahata est réalisateur et Miyazaki est chargé de la conception scénique
+	</p>
+	<h3 class="section-subtitle">Découvrir les fondateurs</h3>
+	<div class="about-founders">
+		<div class="founder">
+			<div class="fake-pic"></div>
+			<div class="founder-text">
+				<hr class="stroke">
+				<span class="founder-name">Isao Takahata</span>
+				<span class="founder-role">Réalisateur</span>
+			</div>
+		</div>
+		<div class="founder">
+			<div class="fake-pic"></div>
+			<div class="founder-text">
+				<hr class="stroke">
+				<span class="founder-name">Isao Takahata</span>
+				<span class="founder-role">Réalisateur</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-section about-universe">
+	<h2 class="section-title">Univers</h2>
+	<p class="section-text">
+		S’il est un thème important à retenir dans les films du Studio Ghibli, c’est certainement celui de l’environnement ! Les arbres y sont omniprésents et les paysages grandioses ! Partout, l’homme doit apprendre à vivre en accord avec la nature. Il doit trouver sa place au sein d’un espace magique et empreint de mysticisme. Et surtout, il ne doit pas renverser cet équilibre fragile… Sous peine de connaître un triste sort, comme l’on peut le constater dans Princesse Mononoké (1997) ou Nausicaa et la vallée du vent (1984). Les explosions, qui ne sont pas sans rappeler celles de Nagasaki et d’Hiroshima, sont d’ailleurs fréquentes dans les films de Ghibli, car le Japon sait d’où il vient…
+	</p>
+	<a class="section-cta" href="">Voir tous les films</a>
+</section>
+
+<section class="universe-gallery">
+	<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
+	<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
+	<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
+	<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
+	<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
+	<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
+</section>
+
+<section class="about-section">
+	<h2 class="section-title">Musique</h2>
+	<p class="section-paragraph">
+		L’élément essentiel du succès du Studio Ghibli reste la musique, composé par Mamoru Fujisawa, plus connu sous le nom de Joe Hisaishi est chef d’orchestre, pianiste et parolier. Pour le Studio Ghibli, il a créé les musiques de Nausicaa de la Vallée du Vent (1984), Le Château dans le Ciel (1986), Mon Voisin Totoro (1988), Kiki la Petite Sorcière (1989), Porco Rosso (1992), Princesse Mononoké (1997), Le Voyage de Chihiro (2001) et bien d’autres. Ses mélodies d’une profondeur et d’une intensité rares transportent et enveloppent l’âme du Studio Ghibli d’un duvet chaud et doux…
+	</p>
+	<a class="section-cta" href="">Découvrir Joe Hisaishi</a>
+	<div>
+		<iframe width="100%" height="58%" src="https://www.youtube.com/embed/eY1XtWyKlJA" frameborder="0" gesture="media" allowfullscreen></iframe>
+	</div>
+</section>
+
+{% endblock %}

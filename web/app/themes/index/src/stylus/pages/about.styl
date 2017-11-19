@@ -1,0 +1,165 @@
+.about-bio
+  background-color #1c1b1b
+  padding-bottom 5em
+
+.about-bio-image
+  position relative
+
+  img
+    width calc(100% - 10vw)
+
+  &::after
+    content ''
+    position absolute
+    top 0
+    height 25%
+    width 100%
+    background-color white
+
+.about-bio-wrapper
+  display flex
+  padding 3em site-margin
+
+.about-bio-item
+  display flex
+  flex-direction column
+  margin-right 15%
+
+  ul
+    display flex
+    flex-direction column
+    list-style-type none
+    margin 0
+    padding 0
+
+  li
+    color white
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+
+  a
+    color greenish
+    text-decoration none
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 2.45;
+    letter-spacing: 0.2px;
+    position relative
+
+    &:hover::after
+      transform scaleX(1)
+
+    &::after
+      content ''
+      position absolute
+      background-color greenish
+      height 2px
+      width 100%
+      transform scaleX(0)
+      transition transform 0.3s ease-in-out
+      left 0
+      bottom -3px
+      transform-origin left
+
+.about-bio-title
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  color: #585858;
+  text-transform uppercase
+
+.about-section
+  padding 6em site-margin
+
+  .section-title
+    font-family secondary-font
+    text-transform initial
+    font-size: 45px;
+    letter-spacing: 0.3px;
+    color: #333333;
+    font-weight normal
+    margin-bottom 1em
+
+  .section-text
+    margin 0 site-margin 2em
+    text-align center
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #717171;
+
+  .section-subtitle
+    font-family secondary-font
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #2e2e2e;
+
+.about-founders
+  display flex
+  justify-content center
+  align-items flex-start
+
+  .founder
+    position relative
+
+    &:hover .founder-text
+      display flex
+
+    &:first-child
+      margin-top 10%
+      justify-content flex-end
+
+.fake-pic
+  background-color red
+  width 621px
+  height 844px
+
+.founder-text
+  display none
+  flex-direction column
+  justify-content flex-end
+  position absolute
+  top 0
+  left 0
+  height 100%
+  width 100%
+  padding 5em 3em
+  background-color rgba(#1a1a1a, 0.77)
+
+.stroke
+  height 10px
+  width 36px
+  margin 0
+  background-color greenish
+  border 0
+
+.founder-name
+  font-family secondary-font
+  font-size: 35px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  color: #f5f5f5;
+  margin 0.5em 0
+
+.founder-role
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  color: #b5b5b5;
+
+.about-universe
+  background-color #1c1b1b
+  display flex
+  flex-direction column
+  align-items center
+
+  .section-title
+    color white
+
+  .section-text
+    color #bababa
+
+  .section-cta
+    margin 3em auto
