@@ -2,36 +2,23 @@
 	<hr class="section-stroke">
 	<h2 class="section-title">Œuvres récentes</h2>
 
+	{% for movie in latest_movies %}
 	<div class="movie">
-		<h3 class="movie-title">La tortue rouge</h3>
-		<span class="movie-year">2016</span>
-		<p class="movie-excerpt">
-			À travers l'histoire d'un naufragé sur une île déserte tropicale peuplée de tortues, de crabes et d'oiseaux, La tortue rouge raconte les grandes étapes de la vie d'un être humain.
-		</p>
-		<div class="movie-image">
-			<img src="{{ theme.uri }}/dist/img/chichiro-bg.jpg" alt="">
-			<a href="#" class="btn-scale movie-cta">
+		<h3 class="movie-title">{{ movie.post_title}}</h3>
+		<span class="movie-year">{{ movie.terms('year')[0].name }}</span>
+		<p class="movie-excerpt">{{ movie.post_excerpt }}</p>
+		<div class="movie-image-wrapper">
+			{% if movie.illustration_1 %}
+			<img class="movie-image" src="{{ TimberImage(movie.illustration_1) }}" alt="" width="100%">
+			{% endif %}
+			<a href="{{ movie.link }}" class="btn-scale movie-cta">
 				<span class="about-cta-text">Voir la fiche du film</span>
 					{% include '/dist/img/right-arrow.svg' %}
 			</a>
 		</div>
 	</div>
+	{% endfor %}
 
-	<div class="movie">
-		<h3 class="movie-title">La tortue rouge</h3>
-		<span class="movie-year">2016</span>
-		<p class="movie-excerpt">
-			À travers l'histoire d'un naufragé sur une île déserte tropicale peuplée de tortues, de crabes et d'oiseaux, La tortue rouge raconte les grandes étapes de la vie d'un être humain.
-		</p>
-		<div class="movie-image">
-			<img src="{{ theme.uri }}/dist/img/chichiro-bg.jpg" alt="">
-			<a href="#" class="btn-scale movie-cta">
-				<span class="about-cta-text">Voir la fiche du film</span>
-					{% include '/dist/img/right-arrow.svg' %}
-			</a>
-		</div>
-	</div>
-
-	<a href="#" class="section-cta">Voir tous les films</a>
+	<a href="#" class="cta">Voir tous les films</a>
 
 </section>

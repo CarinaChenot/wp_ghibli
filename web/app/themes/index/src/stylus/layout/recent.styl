@@ -21,18 +21,23 @@ $movieBg
     display flex
     flex-direction column
 
-    .movie-image
+    .movie-image-wrapper
       align-self flex-end
 
     .movie-cta
       right site-margin
 
+    &:nth-child(odd)
+      .movie-image-wrapper
+        padding-left site-margin
+
     &:nth-child(even)
       text-align right
       align-items flex-end
 
-      .movie-image
+      .movie-image-wrapper
         align-self flex-start
+        padding-right site-margin
 
       .movie-cta
         left site-margin

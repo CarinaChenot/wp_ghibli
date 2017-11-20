@@ -9,7 +9,7 @@
 <section class="movie-bio">
 	<span class="movie-year">{{ post.terms('year')[0].name }}</span>
 	<h2 class="movie-title">{{ post.post_title }}</h2>
-	<span class="movie-type">
+	<span class="movie-category">
 		{% for genre in post.terms('genre') %}
 			{{ genre.name }}{{ loop.index != loop.length ? ',' : '' }}
 		{% endfor %}

@@ -2,14 +2,13 @@
 	<hr class="section-stroke">
 	<h2 class="section-title">Œuvres populaires</h2>
 	<div class="movies-grid">
-		{% for movie in acf.famous_movies %}
-		<div class="movie-item" style="background-image: url('{{ TimberImage(movie) }}')">
+		{% for movie in famous_movies %}
+		<div class="movie-item" style="background-image: url('{{ movie.thumbnail.src }}')">
 			<div class="movie-content">
 				<h3 class="movie-item-title">{{ movie.post_title }}</h3>
 				<p class="movie-item-text">{{ movie.post_excerpt }}</p>
 				{% if loop.index0 == 0 %}
-				{# TODO: Put movie link #}
-				<a href="#" class="movie-cta">
+				<a href="{{ movie.link }}" class="movie-cta">
 					{% include '/dist/img/right-arrow.svg' %}
 				</a>
 				{% endif %}

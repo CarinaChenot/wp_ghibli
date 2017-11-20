@@ -3,8 +3,10 @@
 Template Name: Page Home
 */
 
-$timber = new \Timber\Timber();
 $context = Timber::get_context();
 
-$context['acf'] = get_fields();
+$context['famous_movies'] = wpPostsToTimber(get_field('famous_movies'));
+$context['latest_movies'] = getRecentMovies(get_field('recent_movies_number'));
+
+dump($context);
 Timber::render('views/pages/home.twig', $context);
