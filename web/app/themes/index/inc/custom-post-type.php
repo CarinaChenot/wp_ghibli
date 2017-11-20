@@ -39,21 +39,21 @@ function add_custom_type_film() {
 
 	register_post_type( $post_type, $args );
 
-	$taxonomy = 'author';
-	$object_type = array( 'film' );
-	$args = array(
-		'label' => __( 'Auteur' ),
-		'rewrite' => array( 'slug' => 'author' ),
-		'hierarchical' => false,
-	);
-
-	register_taxonomy( $taxonomy, $object_type, $args );
-
 	$taxonomy = 'year';
 	$object_type = array( 'film' );
 	$args = array(
 		'label' => __( 'Année de production' ),
 		'rewrite' => array( 'slug' => 'annee' ),
+		'hierarchical' => false,
+	);
+
+	register_taxonomy( $taxonomy, $object_type, $args );
+
+	$taxonomy = 'genre';
+	$object_type = array( 'film' );
+	$args = array(
+		'label' => __( 'Genres' ),
+		'rewrite' => array( 'slug' => 'genre' ),
 		'hierarchical' => false,
 	);
 

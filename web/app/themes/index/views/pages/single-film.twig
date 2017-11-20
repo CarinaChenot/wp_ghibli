@@ -1,0 +1,84 @@
+{% set containerClass = 'single-film' %}
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="video-container">
+	Ici réside la vidéo de movie
+</div>
+<section class="movie-bio">
+	<span class="movie-year">{{ post.terms('year')[0].name }}</span>
+	<h2 class="movie-title">{{ post.post_title }}</h2>
+	<span class="movie-type">
+		{% for genre in post.terms('genre') %}
+			{{ genre.name }}{{ loop.index != loop.length ? ',' : '' }}
+		{% endfor %}
+	</span>
+	<p class="movie-excerpt">{{ post.post_excerpt }}</p>
+</section>
+<div class="movie-poster-wrapper">
+	<img src="{{ post.thumbnail.src }}" alt="" class="movie-poster">
+</div>
+<section class="summary">
+	<h3 class="summary-title">Résumé</h3>
+	<hr class="summary-underline">
+	<div class="summary-text">{{ post.content }}</div>
+	<div class="movie-author">
+		<div class="movie-author-picture" style="background-image: url('<?= THEME_URL . '/dist/img/doge.jpg'; ?>')"></div>
+		<div class="movie-author-text">
+			<span class="movie-author-name">{{ post.movie_author }}</span>
+			<span class="movie-author-role">{{ post.author_role }}</span>
+		</div>
+	</div>
+</section>
+
+<section class="gallery">
+	<img src="{{ TimberImage(post.illustration_1) }}" alt="" class="gallery-picture">
+	<img src="{{ TimberImage(post.illustration_2) }}" alt="" class="gallery-picture">
+	<img src="{{ TimberImage(post.illustration_3) }}" alt="" class="gallery-picture">
+</section>
+
+<section class="people">
+	<h3 class="summary-title">Fiche technique</h3>
+	<hr class="summary-underline">
+	<div class="people-grid">
+		<div class="people-item">
+			<span class="people-role">{{ acf.scenariste.label }}</span>
+			<span class="people-name">{{ post.scenariste }}</span>
+		</div>
+		<div class="people-item">
+			<span class="people-role">{{ acf.adaptation.label }}</span>
+			<span class="people-name">{{ post.adaptation }}</span>
+		</div>
+		<div class="people-item">
+			<span class="people-role">{{ acf.chef_layout.label }}</span>
+			<span class="people-name">{{ post.chef_layout }}</span>
+		</div>
+		<div class="people-item">
+			<span class="people-role">{{ acf.chef_decorateur.label }}</span>
+			<span class="people-name">{{ post.chef_decorateur }}</span>
+		</div>
+		<div class="people-item">
+			<span class="people-role">{{ acf.chef_animateur.label }}</span>
+			<span class="people-name">{{ post.chef_animateur }}</span>
+		</div>
+		<div class="people-item">
+			<span class="people-role">{{ acf.chef_compositing.label }}</span>
+			<span class="people-name">{{ post.chef_compositing }}</span>
+		</div>
+		<div class="people-item">
+			<span class="people-role">{{ acf.chef_effets_speciaux.label }}</span>
+			<span class="people-name">{{ post.chef_effets_speciaux }}</span>
+		</div>
+		<div class="people-item">
+			<span class="people-role">{{ acf.musique.label }}</span>
+			<span class="people-name">{{ post.musique }}</span>
+		</div>
+		<div class="people-item">
+			<span class="people-role">{{ acf.production_executive.label }}</span>
+			<span class="people-name">{{ post.production_executive }}</span>
+		</div>
+	</div>
+</section>
+
+{% endblock %}
