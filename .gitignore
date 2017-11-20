@@ -15,6 +15,9 @@ web/app/upgrade
 # WordPress
 web/wp
 
+# Build folder
+wp-content/themes/ghibli/dist/
+
 # Composer
 vendor/*
 !vendor/.gitkeep
@@ -24,3 +27,5 @@ composer.lock
 node_modules
 web/app/themes/index/dist/*
 !web/app/themes/index/dist/.gitkeep
+
+web/app/themes/index/.vscode/*
