@@ -12,7 +12,7 @@ This Wordpress starter is an all in one built for classical Wordpress website
 
 ### Installing
 
-* [Installation](https://github.com/CarinaChenot/wp_ghibli/blob/add-docs/docs/installation.md)
+* [Installation](./docs/installation.md)
 
 ## Built With
 
