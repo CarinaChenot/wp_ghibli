@@ -12,9 +12,9 @@ Create the `wp_ghibli` database and import the file `db.sql` to the database
 
 Run `composer install`
 
-Create a `.env` file with [this content](./docs/.env) and replace the paths if needed
+Create a `.env` file with [this content](./.env) and replace the paths if needed
 
-Create a `.htaccess` file with [this content](./docs/.htaccess) and replace the paths if needed
+Create a `.htaccess` file with [this content](./.htaccess) and replace the paths if needed
 
 **4. On the ghibli theme folder** *(`web/app/themes/index/`)*
 
