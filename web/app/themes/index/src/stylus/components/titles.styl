@@ -1,8 +1,10 @@
 .page-hero
   padding 6em site-margin
+  display flex
+  flex-direction column
 
   &.dark
-    background #1c1b1b
+    background dark-bg
 
 .page-title
   font-family secondary-font
@@ -13,6 +15,7 @@
 
 .page-subtitle
   font-size 20px
+  margin-bottom 3em
 
 .page-title,
 .page-subtitle
@@ -24,8 +27,8 @@
 
 .arrow svg
   height 15px
-  fill #1e201d;
+  fill #1e201d
   transform rotate(90deg)
 
   .dark &
-    fill #fff
+    fill white

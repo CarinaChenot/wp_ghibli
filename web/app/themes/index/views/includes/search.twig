@@ -1,0 +1,18 @@
+<section class="search-container">
+  <div class="search">
+    {% for n in 0..1 %}
+    <div class="dropdown">
+      <div class="dropdown-text">Genre</div>
+      <div class="dropdown-content">
+        {% for n in 0..5 %}
+        <div class="dropdown-item">
+          <input type="checkbox" id="genre">
+          <label for="genre">Animation</label>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    <input class="search-input" type="text" placeholder="Rechercher le nom d'un film">
+  </div>
+</section>

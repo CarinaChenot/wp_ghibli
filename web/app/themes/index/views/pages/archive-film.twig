@@ -2,5 +2,27 @@
 {% extends "base.twig" %}
 
 {% block content %}
-  kdfksj
+
+<div class="page-hero dark">
+	<h1 class="page-title">{{ post.post_title }}</h1>
+  <span class="page-subtitle">Découvrez dans cette section les longs métrages produits et réalisés au sein du studio Ghibli.</span>
+	<span class="arrow">{% include '/dist/img/right-arrow.svg' %}</span>
+</div>
+
+{% include './includes/search.twig' %}
+
+<section class="cards-container">
+  {% for n in 0..10 %}
+    	{% include './includes/movie_card.twig' %}
+  {% endfor %}
+</section>
+<section class="pagination">
+  <a class="pagination-left" href="">{% include '/dist/img/right-arrow.svg' %}</a>
+  <ul class="pagination-list">
+    <li><a class="pagination-number current" href="">1</a></li>
+    <li><a class="pagination-number" href="">2</a></li>
+    <li><a class="pagination-number" href="">3</a></li>
+  </ul>
+  <a class="pagination-right" href="">{% include '/dist/img/right-arrow.svg' %}</a>
+</section>
 {% endblock %}

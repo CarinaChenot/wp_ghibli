@@ -4,12 +4,12 @@
 {% block content %}
 
 <div class="page-hero">
-	<h1 class="page-title">Le <br>studio Ghibli</h1>
+	<h1 class="page-title">{{ post.post_title }}</h1>
 	<span class="arrow">{% include '/dist/img/right-arrow.svg' %}</span>
 </div>
 <section class="about-bio">
 	<div class="about-bio-image">
-		<img src="{{ theme.uri }}/dist/img/ghibli_museum.jpg" alt="">
+		<img src="{{ post.thumbnail.src }}" alt="">
 	</div>
 	<div class="about-bio-wrapper">
 		<div class="about-bio-item">
@@ -46,7 +46,7 @@
 </section>
 
 <section class="topic origins">
-	<h2 class="topic-title">Origines</h2>
+	<h2 class="topic-title">{{ TimberPost(section_1).post_title }}</h2>
 	<p class="topic-paragraph">
 		Le studio existait depuis longtemps dans l'esprit de Hayao Miyazaki et Isao Takahata, deux visionnaires qui ont su rester fidèles à leurs principes. L’histoire du studio Ghibli commence en réalité à la fin des années 50. Isao Takahata entre au studio Tôei Dôga (futur Tôei Animation) en 1959 et Hayao Miyazaki en 1963. Tous deux appartiennent au même syndicat, Takahata en étant le vice-président et Miyazaki le secrétaire général. Après la réalisation de Taiyô no Ôji : Horusu no Daibôken (Horus, prince du soleil), tous deux quittent la Tôei et intègrent un autre studio, où Takahata est réalisateur et Miyazaki est chargé de la conception scénique
 	</p>

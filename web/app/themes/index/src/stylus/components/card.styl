@@ -1,0 +1,39 @@
+.cards-container
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  grid-gap 4em 2em
+  margin 6em site-margin
+
+.movie-card
+  background-color white
+  transition box-shadow 0.3s ease-in-out
+
+  &:hover
+    box-shadow 0 0 44px 0 rgba(0, 0, 0, 0.21)
+
+  img
+    width 100%
+
+.card-text
+  margin 2.5em
+  display flex
+  flex-direction column
+
+.card-title
+  font-family secondary-font
+  font-size 26px
+  font-weight 300
+  letter-spacing 0.4px
+  color #585858
+  margin 0
+
+.card-genre
+  font-weight bold
+  letter-spacing 0.2px
+  color green
+  margin 0.8em 0
+
+.card-year
+  font-style italic
+  letter-spacing 0.4px
+  color #585858

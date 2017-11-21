@@ -1,0 +1,134 @@
+.search-container
+  position relative
+  z-index 0
+  margin-top -2em
+
+  &::before
+    content ''
+    position absolute
+    left -(site-margin)
+    right -(site-margin)
+    width auto
+    background-color dark-bg
+    height 50%
+    top 0
+    z-index -1
+
+.search
+  background white
+  margin 0 site-margin
+  display flex
+  position relative
+  z-index 0
+
+  .search-input
+    border 0
+    border-bottom solid 1px #f1f1f1
+    align-self center
+    padding 1em 0 0.5em
+    margin 0 4em 0 2em
+    width 100%
+    font-size 20px
+    letter-spacing 0.3px
+    color #bababa
+
+    &::placeholder
+      font-style italic
+      font-weight 300
+      color #bababa
+
+  .dropdown
+    position relative
+    font-size 20px
+    font-weight bold
+    letter-spacing 0.3px
+    min-width 20%
+    text-align center
+    padding 2em 0
+
+    &:hover
+      .dropdown-content
+        transform scaleY(1)
+
+  .dropdown-text
+    width 100%
+    border-right solid 1px #8c8c8c
+
+  .dropdown-content
+    position absolute
+    top 100%
+    left 0
+    right 0
+    transform scaleY(0)
+    transform-origin top
+    transition transform 0.2s ease-in-out
+
+  .dropdown-item
+    padding 1em
+    background-color white
+
+
+    &:not(:last-child)
+      border-bottom solid 1px #f1f1f1
+
+    label
+      cursor pointer
+      font-size 20px
+      font-weight bold
+      letter-spacing 0.3px
+      color #3d3d3d
+      margin-left 0.5em
+
+
+  // .dropdown-item
+  //   [type="checkbox"]:not(:checked),
+  //   [type="checkbox"]:checked
+  //     position absolute
+  //     left -9999px
+
+  //     + label
+  //       &::before
+  //         content ''
+  //         position absolute
+  //         left 0
+  //         top 2px
+  //         width 17px
+  //         height 17px /* dim. de la case */
+  //         border 1px solid #aaa
+  //         background #f8f8f8
+  //         border-radius 3px /* angles arrondis */
+  //         box-shadow inset 0 1px 3px rgba(0,0,0,.3)
+
+  //       &::after
+  //         content ''
+  //         position absolute
+  //         top 0
+  //         left 4px
+  //         font-size 14px
+  //         color #09ad7e
+  //         transition all .2s /* on prévoit une animation */
+
+  //     // &:checked
+  //     //   background-color light-green
+  //     //   border-color transparent
+
+  //   [type="checkbox"]:not(:checked) + label:after
+  //     opacity 0
+  //     transform scale(0)
+
+  //   [type="checkbox"]:checked + label:after
+  //     opacity 1
+  //     transform scale(1)
+
+
+      // position relative
+      // padding-left 5em
+
+      // &::before
+      //   content ''
+      //   position absolute
+      //   width 1em
+      //   height 1ch
+      //   border solid 1px #959595
+      //   border-radius 2px
+      //   left -2em
