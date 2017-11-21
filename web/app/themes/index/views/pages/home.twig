@@ -18,19 +18,12 @@
 
 	{% include './includes/recent_movies.twig' %}
 
-	<section class="about">
-		<div class="about-image">
-			<img src="{{ theme.uri }}/dist/img/miyasaki.jpeg">
-		</div>
-		<div class="about-content">
-			<div class="about-text">
-				<h3 class="about-title">Découvrez toute l’histoire du studio et de ses grands fondateurs.</h3>
-				<p class="about-paragraph">
-					Le studio Ghibli est un studio d'animation japonais, il a été officiellement fondé, par Hayao Miyazaki et Isao Takahata. Il produit des films d'animation japonais, longs-métrages et courts-métrages, ainsi que des téléfilms, des séries d'animation et des jeux vidéo, dans une moindre mesure.
-				</p>
-			</div>
-			<a href="#" class="btn-scale about-cta">
-				<span class="about-cta-text">À propos de nous</span>
+	<section class="studio">
+		<img class="studio-image" src="{{ TimberImage(post.studio_image) }}">
+		<div class="studio-content">
+			{{ post.content }}
+			<a href="{{ page_about.link }}" class="btn-scale studio-cta">
+				<span class="studio-cta-text">À propos de nous</span>
 					{% include '/dist/img/right-arrow.svg' %}
 			</a>
 		</div>

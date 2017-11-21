@@ -1,0 +1,62 @@
+.studio
+  display grid
+  grid-template-columns 30% auto
+  background-color #1c1b1b
+  margin-bottom 7em
+
+  +max(small)
+    display flex
+    flex-direction column-reverse
+
+  +max(small)
+    flex-direction column-reverse
+    font-size 19px
+    background-color transparent
+
+.studio-image
+  width 100%
+
+  img
+    width 100%
+
+.studio-content
+  padding 0 13vw
+  height 100%
+  position relative
+
+  +max(small)
+    height auto
+    margin-bottom 2.7em
+    background-color #1c1b1b
+    padding 3em 13vw 4em
+
+.studio-content
+  display flex
+  flex-direction column
+  justify-content center
+
+  h3
+    font-size 30px
+    line-height 1.5
+    color #eaeaea
+    font-weight normal
+
+    +max(small)
+      font-size 19px
+
+  p
+    font-size 20px
+    line-height 1.75
+    color #d1d1d1
+
+    +max(small)
+      font-size 15px
+
+.studio-cta
+  right site-margin
+  background-color blue-sky
+  position absolute
+
+  +max(small)
+    &:hover
+      width calc(100% - 20vw)
