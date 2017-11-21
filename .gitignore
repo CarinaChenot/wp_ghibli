@@ -4,7 +4,7 @@
 
 # Config
 web/.htaccess
-.env
+web/.env
 
 # Application
 web/app/plugins/*
