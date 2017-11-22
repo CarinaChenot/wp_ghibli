@@ -3,16 +3,9 @@
   background-color beige
 
 .articles-grid
-  display flex
-  flex-wrap wrap
-  justify-content space-evenly
+  display grid
+  grid-template-columns repeat(5, 1fr)
+  grid-gap 3em 2em
 
 .shop
   margin 4em site-margin
-
-  .articles-grid
-    margin 0 -2em
-    width auto
-
-  .article
-    margin 2em

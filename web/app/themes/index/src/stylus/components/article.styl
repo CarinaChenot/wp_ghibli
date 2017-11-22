@@ -1,19 +1,18 @@
 .article
-  .article-image
-    background red
-    height 250px
-    width 200px
-    position relative
+  position relative
+  box-shadow 0 0 9px 0px rgba(0,0,0,0.21)
 
-  &.has-promo .article-image::after
+  &.has-promo::after
     content ''
     position absolute
-    width 0
-    height 0
+    top 0
     right 0
     border 0 solid transparent
     border-left-width 2em
     border-top 2em solid green
+
+  .article-image
+    width 100%
 
   .article-description
     display flex

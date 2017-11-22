@@ -1,3 +1,4 @@
+{% set containerClass = 'archive-shop' %}
 {% extends "base.twig" %}
 
 {% block content %}
@@ -9,9 +10,7 @@
 		{% for i in 0..4 %}
 		{# TODO: Add "has-promo" class if has promo category#}
 		<article class="article has-promo">
-			<div class="article-image">
-				{# <img src="" alt=""> #}
-			</div>
+			<img class="article-image" src="{{ theme.link }}/dist/img/miyasaki.jpeg" alt="">
 			<div class="article-description">
 				<span class="article-type">T-shirt</span>
 				<span class="article-name">Studio Ghibli - Totoro</span>
@@ -29,9 +28,7 @@
 		{% for i in 0..19 %}
 		{# TODO: Add "has-promo" class if has promo category#}
 		<article class="article has-promo">
-			<div class="article-image">
-				{# <img src="" alt=""> #}
-			</div>
+			<img class="article-image" src="{{ theme.link }}/dist/img/miyasaki.jpeg" alt="">
 			<div class="article-description">
 				<span class="article-type">T-shirt</span>
 				<span class="article-name">Studio Ghibli - Totoro</span>
@@ -41,4 +38,7 @@
 		{% endfor %}
 	</div>
 </section>
+
+{% include './includes/pagination.twig' %}
+
 {% endblock %}
