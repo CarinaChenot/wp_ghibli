@@ -1,0 +1,25 @@
+{% set containerClass = 'single-author' %}
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="author-bio">
+  {% include '/dist/img/right-arrow.svg' %}
+  <h2 class="author-name">Hayao Miyazaki</h2>
+  <hr class="stroke">
+  <div class="author-text">
+    Hayao Miyazaki (宮崎 駿, Miyazaki Hayao), né le 5 janvier 1941 à Tokyo, est un dessinateur, réalisateur et producteur de films d'animation japonais, cofondateur du Studio Ghibli. Presque inconnu en Occident en dehors des cercles d’amateurs d’anime et de manga jusqu’à la sortie internationale de Princesse Mononoké en 1999, ses films rencontrent ensuite un grand succès partout dans le monde et surtout au Japon où certains ont battu des records d’affluence.
+  </div>
+</div>
+<img class="author-photo" src="{{ theme.link }}/dist/img/miyasaki.jpeg" alt="">
+{% for n in 0..2 %}
+<div class="author-photo-wrapper">
+  <img class="author-photo" src="{{ theme.link }}/dist/img/miyasaki.jpeg" alt="">
+  <div class="author-photo-text">
+    <h3 class="author-name">Hayao Miyazaki</h3>
+    <span class="author-job">Réalisateur - Dessinateur</span>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
