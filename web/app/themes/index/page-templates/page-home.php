@@ -4,11 +4,11 @@ Template Name: Page Home
 */
 
 $pages = get_posts(array(
-  'post_type' => 'page',
-  'fields' => 'ids',
-  'nopaging' => true,
-  'meta_key' => '_wp_page_template',
-  'meta_value' => 'page-templates/page-about.php'
+    'post_type' => 'page',
+    'fields' => 'ids',
+    'nopaging' => true,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'page-templates/page-about.php'
 ));
 
 $context = Timber::get_context();
