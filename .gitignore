@@ -20,3 +20,6 @@ vendor/*
 !vendor/.gitkeep
 .DS_Store
 .idea
+
+# Editor
+**/.vscode/**
