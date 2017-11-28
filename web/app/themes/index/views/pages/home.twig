@@ -1,9 +1,10 @@
+
 {% extends "base.twig" %}
 
 {% block content %}
 	<section class="hero" style="background-image: url('{{ post.thumbnail.src }}')">
 		<img class="hero-logo" src="{{ TimberImage(post.hero_logo) }}">
-		<a class="hero-cta" href="{{ theme.uri }}/a-propos">Découvrir l'univers</a>
+		<a class="hero-cta" href="{{ site.url }}/a-propos">Découvrir l'univers</a>
 	</section>
 
 	<section class="quote">

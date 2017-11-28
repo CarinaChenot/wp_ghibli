@@ -35,10 +35,13 @@ function getRecentMovies($numberRequested) {
 }
 
 
-function wpPostsToTimber(array $postsArray) {
-  $array = [];
+function wpPostsToTimber($postsArray) {
+    if (empty($postsArray)) {
+        return;
+    }
+    $array = [];
 
-  foreach ($postsArray as $post) {
+    foreach ($postsArray as $post) {
     array_push($array, new Timber\Post($post));
   }
 

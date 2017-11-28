@@ -1,31 +1,23 @@
-*.log
-.DS_Store
-.idea
-
-# Config
-web/.htaccess
-web/.env
-
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
 web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
 
 # WordPress
 web/wp
+web/.htaccess
 
-# Build folder
-wp-content/themes/ghibli/dist/
+node_modules/
+# Dotenv
+.env
+.env.*
+!.env.example
 
 # Composer
 vendor/*
 !vendor/.gitkeep
-composer.lock
-
-# Gulp
-node_modules
-web/app/themes/index/dist/*
-!web/app/themes/index/dist/.gitkeep
-
-web/app/themes/index/.vscode/*
+.DS_Store
+.idea
