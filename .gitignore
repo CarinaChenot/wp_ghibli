@@ -4,6 +4,8 @@ web/app/plugins/*
 web/app/mu-plugins/*/
 web/app/upgrade
 !web/app/uploads/.gitkeep
+deploy.yaml
+web/app/themes/index/dist/*
 
 # WordPress
 web/wp
@@ -23,3 +25,4 @@ vendor/*
 
 # Editor
 **/.vscode/**
+
