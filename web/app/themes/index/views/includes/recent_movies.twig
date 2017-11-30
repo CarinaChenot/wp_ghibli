@@ -9,7 +9,9 @@
 		<p class="movie-excerpt">{{ movie.post_excerpt }}</p>
 		<div class="movie-image-wrapper">
 			{% if movie.illustration_1 %}
-			<img class="movie-image" src="{{ TimberImage(movie.illustration_1) }}" alt="" width="100%">
+			<div class="movie-image-container">
+				<img class="movie-image" src="{{ TimberImage(movie.illustration_1) }}" alt="" width="100%">
+			</div>
 			{% endif %}
 			<a href="{{ movie.link }}" class="btn-scale movie-cta">
 				<span class="about-cta-text">Voir la fiche du film</span>

@@ -7,6 +7,7 @@
   +max(small)
     display flex
     flex-direction column-reverse
+    margin-bottom 0
 
   +max(small)
     flex-direction column-reverse
@@ -28,7 +29,7 @@
     height auto
     margin-bottom 2.7em
     background-color dark-bg
-    padding 3em 13vw 4em
+    padding 1em 8vw 2.5em
 
 .studio-content
   display flex
@@ -36,7 +37,7 @@
   justify-content center
 
   h3
-    font-size 30px
+    font-size 1.563rem
     line-height 1.5
     color #eaeaea
     font-weight normal
@@ -45,12 +46,9 @@
       font-size 19px
 
   p
-    font-size 20px
+    font-size 1rem
     line-height 1.75
     color #d1d1d1
-
-    +max(small)
-      font-size 15px
 
 .studio-cta
   right site-margin
@@ -58,5 +56,14 @@
   position absolute
 
   +max(small)
+    padding 1em
+    display flex
+    justify-content center
+    align-items flex-end
+
     &:hover
       width calc(100% - 20vw)
+
+    svg
+      margin 0
+      margin-left 1em

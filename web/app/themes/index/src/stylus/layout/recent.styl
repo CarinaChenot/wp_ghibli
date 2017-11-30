@@ -14,6 +14,10 @@ $movieBg
   padding 5em 0 7.2em
   position relative
 
+  +max(small)
+    padding-top 3em
+    padding-bottom 1em
+
   &::before
     @extends $movieBg
 
@@ -27,24 +31,28 @@ $movieBg
     .movie-cta
       right site-margin
 
-    &:nth-child(odd)
-      .movie-image-wrapper
-        padding-left site-margin
+    +min(small)
+      &:nth-child(odd)
+        .movie-image-wrapper
+          padding-left site-margin
 
-    &:nth-child(even)
-      text-align right
-      align-items flex-end
+      &:nth-child(even)
+        text-align right
+        align-items flex-end
 
-      .movie-image-wrapper
-        align-self flex-start
-        padding-right site-margin
+        .movie-image-wrapper
+          align-self flex-start
+          padding-right site-margin
 
-      .movie-cta
-        left site-margin
+        .movie-cta
+          left site-margin
 
     &:not(:first-child)
       position relative
       padding-top 5em
+
+      +max(small)
+        padding-top 1em
 
       &::before
         @extends $movieBg

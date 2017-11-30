@@ -3,7 +3,9 @@
 
 {% block content %}
 	<section class="hero" style="background-image: url('{{ post.thumbnail.src }}')">
+	<div class="hero-logo-wrapper">
 		<img class="hero-logo anim" src="{{ TimberImage(post.hero_logo) }}">
+	</div>
 		<a class="hero-cta anim" href="{{ site.url }}/a-propos">Découvrir l'univers</a>
 	</section>
 

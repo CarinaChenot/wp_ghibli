@@ -14,6 +14,4 @@ $args = array(
 
 $context['authors'] = Timber::get_posts( $args );
 
-dump($context);
-
 Timber::render('views/pages/about.twig', $context);

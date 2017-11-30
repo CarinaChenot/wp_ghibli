@@ -10,9 +10,14 @@
 .hero-image
   max-width 100%
 
+.hero-logo-wrapper
+  width 50%
+
+  +max(small)
+    width 98%
 
 .hero-logo
-  max-width 647px
+  width 100%
   opacity 0
   transition all 0.6s ease-in-out
   transform translateY(10px)
@@ -25,6 +30,10 @@
   opacity 0
   transition all 0.6s ease-in-out 0.3s
   transform translateY(10px)
+
+  +max(small)
+    padding 1em 1.2em
+    text-align center
 
   &.fade
     opacity 1

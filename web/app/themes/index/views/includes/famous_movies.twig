@@ -7,11 +7,9 @@
 			<div class="movie-content">
 				<h3 class="movie-item-title">{{ movie.post_title }}</h3>
 				<p class="movie-item-text">{{ movie.post_excerpt }}</p>
-				{% if loop.index0 == 0 %}
 				<a href="{{ movie.link }}" class="movie-cta">
 					{% include '/dist/img/right-arrow.svg.twig' %}
 				</a>
-				{% endif %}
 			</div>
 		</div>
 		{% endfor %}

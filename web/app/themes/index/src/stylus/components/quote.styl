@@ -2,9 +2,18 @@
   background-color beige
   padding 4em site-margin
 
+  +max(small)
+    display flex
+    flex-direction column
+    text-align center
+    padding 3em site-margin
+
+    svg
+      margin auto
+
 .quote-text
   color bold-text
-  font-size 2.75rem
+  font-size 2rem
   font-weight 900
   line-height 1.48
   letter-spacing -0.3px
@@ -12,10 +21,13 @@
   max-width 867px
   margin 0 auto
 
+  +max(small)
+    margin 1em 0
+
 .quote-author
   color green
   font-weight 700
-  font-size 1.75rem
+  font-size 1.325rem
   letter-spacing 3.3px
   display block
   text-align right
