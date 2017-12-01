@@ -1,8 +1,11 @@
 <div class="movie-card">
-  <img class="card-cover" src="{{ theme.link }}/dist/img/miyasaki.jpeg" alt="">
+  <img class="card-cover" src="{{ film.thumbnail.src }}" alt="">
   <div class="card-text">
-    <h4 class="card-title">Mon voisin Totoro</h4>
-    <span class="card-genre">Aventure</span>
-    <span class="card-year">1988</span>
+    <h4 class="card-title">{{ film.post_title }}</h4>
+    <span class="card-genre">
+		{% for genre in film.terms('genre') %}
+            {{ genre.name }}{{ loop.index != loop.length ? ',' : '' }}
+        {% endfor %}</span>
+    <span class="card-year">{{ film.terms('year')[0].name }}</span>
   </div>
 </div>

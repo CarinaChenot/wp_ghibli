@@ -12,9 +12,9 @@
 {% include './includes/search.twig' %}
 
 <section class="cards-container">
-  {% for n in 0..10 %}
-    	{% include './includes/movie_card.twig' %}
-  {% endfor %}
+    {% for film in films %}
+        {% include './includes/movie_card.twig' %}
+    {% endfor %}
 </section>
 
 {% include './includes/pagination.twig' %}
