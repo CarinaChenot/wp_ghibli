@@ -5,6 +5,8 @@ const rename = require('gulp-rename')
 const babel = require('gulp-babel')
 const stylus = require('gulp-stylus')
 const imagemin = require('gulp-imagemin')
+const concat = require('gulp-concat')
+const uglify = require('gulp-uglify')
 const del = require('del')
 
 const paths = {
@@ -54,6 +56,8 @@ function scripts() {
     .pipe(babel({
       presets: ['env']
     }))
+    .pipe(concat('main.js'))
+    .pipe(uglify())
     .pipe(gulp.dest(paths.scripts.dest));
 }
 

@@ -1,12 +1,12 @@
 .movie-title
   font-family secondary-font
-  font-size 55px
+  font-size 2.5rem
   letter-spacing 0.4px
   color green
   margin 0 0 0.5em 0
 
 .movie-year
-  font-size 30px
+  font-size 1.125rem
   font-weight bold
   color dark-text
 
@@ -19,11 +19,14 @@
   color #9a9a9a
 
 .movie-excerpt
-  font-size 20px
+  font-size 1rem
   line-height 1.5
   letter-spacing 1px
   max-width 50%
   color p-text
+
+  +max(small)
+    max-width 100%
 
 .movie-poster-wrapper
   position relative
@@ -45,6 +48,23 @@
   margin-bottom 7em
   position relative
 
+  +max(small)
+    margin-bottom 3em
+    margin-top 1.5em
+
+  +min(small)
+    .movie-image-container
+      overflow hidden
+      max-height 60vh
+      width 100vw - site-margin
+
 .movie-cta
   background light-green
+  transition transform 0.3s ease-in-out
+
+  &:hover
+    transform translateX(10px)
+
+  &.button-scale:hover
+    transform translateX(10px) translateY(50%)
 

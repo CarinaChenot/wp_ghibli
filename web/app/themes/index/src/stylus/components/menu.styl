@@ -2,13 +2,22 @@
   margin 1.8em 0
   display flex
   justify-content center
+  flex-wrap wrap
   color menu-color
-  font-size 1rem
+  font-size 0.8rem
   text-transform uppercase
+
+  +max(small)
+    .footer &
+      flex-direction column
+      align-items center
 
   .footer &
     font-size 15px
     color bold-text
+
+    +max(small)
+      margin 1em
 
   .menu-item
     color inherit
@@ -19,7 +28,13 @@
       padding 0 2.5em
       letter-spacing 1.1px
 
+      +max(small)
+        padding 0.3em
+
     .main-header &
+      +max(small)
+        padding 0 1em
+
       &:not(:last-child)
         border-right solid 1px #cbcbcb
 
@@ -27,3 +42,5 @@
       &:hover
         font-weight 900
 
+.main-header
+  position relative

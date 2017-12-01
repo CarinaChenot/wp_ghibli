@@ -15,10 +15,9 @@
 		<div class="about-bio-item">
 			<h3 class="about-bio-title">Fondateurs / Représentants</h3>
 			<ul>
-				<li>Hayao Miyazaki</li>
-				<li>Isao Takahata</li>
-				<li>Koji Hoshino</li>
-				<li>Toshio Suzuki</li>
+				{% for author in authors %}
+				<li>{{ author.post_title }}</li>
+				{% endfor %}
 			</ul>
 		</div>
 		<div class="about-bio-item">

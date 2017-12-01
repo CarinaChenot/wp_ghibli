@@ -1,6 +1,9 @@
 .famous-movies
   padding 5em site-margin 7.2em
 
+  +max(small)
+    padding 3em 0 0
+
   .movies-grid
     display flex
     flex-wrap wrap
@@ -18,35 +21,41 @@
 
     +max(small)
       width 100%
+      margin 0.5em 0
 
-    &:first-child
-      width 100%
-      min-height 480px
+      &:last-child
+        margin-bottom 0
 
-      .movie-content
-        width 39%
+    +min(small)
+      &:first-child
+        width 100%
 
-        +max(small)
-          width initial
+        .movie-content
+          width 39%
+          padding-bottom 5em
+
+      &:not(:first-child)
+        .movie-cta
+          display none
 
   .movie-content
     background-color rgba(green, 0.87)
     width 100%
-    padding 5em
+    padding 2.5em 8em 2.5em 2.5em
     position relative
 
     +max(small)
-      padding 3em
+      padding 2em 2em 4em
 
   .movie-item-title
-    font-size 35px
+    font-size 1.75rem
     font-weight bold
     line-height 1.4
     letter-spacing 0.5px
     margin 0 0 1em 0
 
   .movie-item-text
-    font-size 20px
+    font-size 1rem
     line-height 1.5
     letter-spacing 1px
 
@@ -61,3 +70,6 @@
       width 20px
       fill white
       margin 1.2em 2.2em
+
+      +max(small)
+        margin 0.8em 1.2em 0.6em

@@ -16,9 +16,12 @@
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^4.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.1",
-    "gulp-stylus": "^2.6.0"
-  }
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {}
 }

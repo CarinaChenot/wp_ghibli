@@ -1,0 +1,8 @@
+deploy_test:
+    host: "ftp.cluster020.hosting.ovh.net"
+    user: "carinachnq"
+    pass: "pVVXPZGquJkC"
+    path:
+        local: "/"
+        remote: "ghibli/"
+    exclude: ["dploy.yaml", "/web/app/themes/index/src/**", "db.sql"]

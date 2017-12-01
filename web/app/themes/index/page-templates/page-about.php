@@ -10,5 +10,11 @@ $context['sections'][] = new Timber\Post($context['post']->custom['section_1']);
 $context['sections'][] = new Timber\Post($context['post']->custom['section_2']);
 //$context['sections'][] = new Timber\Post($context['post']->custom['section_1']);
 
-//dump($context);
+$args = array(
+  'post_type' => 'author',
+  'posts_per_page' => -1,
+);
+
+$context['authors'] = Timber::get_posts( $args );
+
 Timber::render('views/pages/about.twig', $context);

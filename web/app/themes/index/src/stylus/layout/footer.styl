@@ -2,10 +2,18 @@
   padding 3.2em site-margin
   border-top solid 0.5px rgba(#b3b3b3, 0.5)
 
+  +max(small)
+    padding-top 2.5em
+    padding-bottom 2em
+
   .footer-main
     display flex
     justify-content space-between
     align-items center
+    flex-wrap wrap
+
+    +max(small)
+      flex-direction column
 
   .logo
     max-width 73px
@@ -18,6 +26,9 @@
   display flex
   margin 0
   padding 0
+
+  +max(small)
+    margin-bottom 1em
 
   .social-item
     &:not(:first-child)
