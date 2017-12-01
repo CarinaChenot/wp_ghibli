@@ -13,7 +13,6 @@
       align-items center
 
   .footer &
-    font-size 15px
     color bold-text
 
     +max(small)
@@ -33,15 +32,16 @@
 
     .main-header &
       +max(small)
-        padding 0 1em
+        padding 0 0.8em
 
       &:not(:last-child)
         border-right solid 1px #cbcbcb
 
-      &.current_page_item,
-      &:hover
-        font-weight 900
-        padding 0 1.9em
+      +min(small)
+        &.current_page_item,
+        &:hover
+          font-weight 900
+          padding 0 1.9em
 
 .main-header
   position relative
