@@ -1,1 +1,12 @@
-<h1>404</h1>
+{% extends "base.twig" %}
+
+{% block content %}
+    <section class="error_container">
+        <div class="logo">
+            <img class="error_totoro" src="{{ theme.uri }}/dist/img/totoro.jpg">
+        </div>
+        <p class="error_text">
+            Nous sommes désolé, cette page n’existe pas <br> Vous pouvez retourner sur la page d’accueil en cliquant <a class="error_link" href="/web">ici</a>
+        </p>
+    </section>
+{% endblock %}
