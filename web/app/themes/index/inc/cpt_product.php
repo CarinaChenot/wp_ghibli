@@ -39,6 +39,16 @@ function add_custom_type_product() {
 
 	register_post_type( $post_type, $args );
 
+    $taxonomy = 'famous';
+    $object_type = array( 'product' );
+    $args = array(
+        'label' => __( 'Articles populaires' ),
+        'rewrite' => array( 'slug' => 'famous' ),
+        'hierarchical' => false,
+    );
+
+    register_taxonomy( $taxonomy, $object_type, $args );
+
 }
 
 add_action( 'init', 'add_custom_type_product' );

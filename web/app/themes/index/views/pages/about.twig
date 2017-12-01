@@ -13,7 +13,7 @@
 	</div>
 	<div class="about-bio-wrapper anim">
 		<div class="about-bio-item">
-			<h3 class="about-bio-title">Fondateurs / Repvrésentants</h3>
+			<h3 class="about-bio-title">Fondateurs / Représentants</h3>
 			<ul>
 				{% for author in authors %}
 				<li><a href="{{ author.link }}">{{ author.post_title }}</a></li>
@@ -44,19 +44,34 @@
 	<span class="quote-author">Hayao Miyazaki</span>
 </section>
 
-{% for section in sections %}
-	<section class="topic {{ section.class }}">
-		<h2 class="topic-title anim">{{ section.post_title }}</h2>
+	<section class="topic {{ sections[0].class }}">
+		<h2 class="topic-title anim">{{ sections[0].post_title }}</h2>
 		<p class="topic-paragraph anim">
-			{{ section.post_content }}
+            {{ sections[0].post_content }}
+		</p>
+        {% include './includes/about_media/media_'~sections[0].template~'.twig' %}
+	</section>
+	<section class="topic {{ sections[1].class }}">
+		<h2 class="topic-title anim">{{ sections[1].post_title }}</h2>
+		<p class="topic-paragraph anim">
+            {{ sections[1].post_content }}
+		</p>
+        {% include './includes/about_media/media_'~sections[1].template~'.twig' %}
+	</section>
+	<section class="topic {{ sections[2].class }}">
+		<h2 class="topic-title anim">{{ sections[2].post_title }}</h2>
+		<p class="topic-paragraph anim">
+            {{ sections[2].post_content }}
 		</p>
 
-		{# Suggestion : retirer le cta des includes about media et mettre une condition avec l'ACF du cta (cta text), si vide, pas de cta #}
-		{# {% if cta_text %}
-			<a class="cta anim" href="">{{ cta_text }}</a>
-		{% endif %} #}
-
-		{% include './includes/about_media/media_'~section.template~'.twig' %}
+        {% include './includes/about_media/media_'~sections[2].template~'.twig' %}
 	</section>
-{% endfor %}
+	<section class="topic {{ sections[3].class }}">
+		<h2 class="topic-title anim">{{ sections[3].post_title }}</h2>
+		<p class="topic-paragraph anim">
+            {{ sections[3].post_content }}
+		</p>
+
+        {% include './includes/about_media/media_'~sections[3].template~'.twig' %}
+	</section>
 {% endblock %}
