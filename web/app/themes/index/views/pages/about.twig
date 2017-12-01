@@ -4,16 +4,16 @@
 {% block content %}
 
 <div class="page-hero">
-	<h1 class="page-title">{{ post.post_title }}</h1>
+	<h1 class="page-title anim">{{ post.post_title }}</h1>
 	<span class="arrow">{% include '/dist/img/right-arrow.svg.twig' %}</span>
 </div>
 <section class="about-bio">
-	<div class="about-bio-image">
+	<div class="about-bio-image anim">
 		<img src="{{ post.thumbnail.src }}" alt="">
 	</div>
-	<div class="about-bio-wrapper">
+	<div class="about-bio-wrapper anim">
 		<div class="about-bio-item">
-			<h3 class="about-bio-title">Fondateurs / Représentants</h3>
+			<h3 class="about-bio-title">Fondateurs / Repvrésentants</h3>
 			<ul>
 				{% for author in authors %}
 				<li>{{ author.post_title }}</li>
@@ -36,7 +36,7 @@
 	</div>
 </section>
 
-<section class="quote">
+<section class="quote anim">
 	{% include '/dist/img/quote.svg.twig' %}
 	<p class="quote-text">
 		Je crois au pouvoir de l'histoire. Je crois que les histoires ont un rôle important à jouer dans la formation des êtres humains, qu'elles peuvent stimuler, étonner et inspirer leurs auditeurs
@@ -46,10 +46,15 @@
 
 {% for section in sections %}
 	<section class="topic {{ section.class }}">
-		<h2 class="topic-title">{{ section.post_title }}</h2>
-		<p class="topic-paragraph">
+		<h2 class="topic-title anim">{{ section.post_title }}</h2>
+		<p class="topic-paragraph anim">
 			{{ section.post_content }}
 		</p>
+
+		{# Suggestion : retirer le cta des includes about media et mettre une condition avec l'ACF du cta (cta text), si vide, pas de cta #}
+		{# {% if cta_text %}
+			<a class="cta anim" href="">{{ cta_text }}</a>
+		{% endif %} #}
 
 		{% include './includes/about_media/media_'~section.template~'.twig' %}
 	</section>
