@@ -35,7 +35,7 @@
   margin 0
 
 .summary-text
-  font-size 20px
+  font-size 1rem
   line-height 1.65
   letter-spacing 1px
   color p-text
@@ -98,23 +98,28 @@
   padding 3em site-margin 5em
   background-color beige
 
+  +max(small)
+    padding 1.5em mobile-site-margin 2.5em
+
 .people-grid
-  margin 4em -1em 0
-  display flex
-  flex-wrap wrap
-  justify-content space-between
+  margin 4em 0
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  grid-gap 4em 1em
+
+  +max(small)
+    grid-template-columns repeat(2, 1fr)
+    grid-gap 2em 1em
+    margin 2em 0
 
 .people-item
   display flex
   flex-direction column
-  width 33%
-  padding 0 1em
-  margin-bottom 4em
 
 .people-role
   font-size 20px
   font-weight bold
-  line-height 2.45
+  margin 1em 0
   letter-spacing 0.2px
   text-align left
   color bold-text
