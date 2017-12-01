@@ -1,4 +1,4 @@
-{% if product.terms('famous') is empty %}
+{% if product.terms('famous') is not empty %}
 <article class="article has-promo">
     <img class="article-image" src="{{ product.thumbnail.src }}" alt="">
     <div class="article-description">
