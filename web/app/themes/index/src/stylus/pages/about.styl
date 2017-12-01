@@ -104,6 +104,10 @@
     margin 0
     justify-self flex-start
 
+    +max(small)
+      margin-bottom 1em
+
+
 .founders
   margin-top 6em
   display grid
@@ -113,6 +117,7 @@
   position relative
 
   +max(small)
+    margin-top 3em
     display flex
     flex-direction column
 
@@ -147,9 +152,14 @@
       grid-column 2 / 4
 
 .founder-image
-  height 100%
   transform translateZ(0)
   transition transform .75s cubic-bezier(.23,1,.32,1)
+
+  +min(small)
+    height 100%
+
+  +max(small)
+    width 100%
 
 .founder-legend
   display flex
