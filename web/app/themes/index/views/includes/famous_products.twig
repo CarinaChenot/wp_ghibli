@@ -1,4 +1,5 @@
-<article class="article">
+{% if product.terms('famous') is empty %}
+<article class="article has-promo">
     <img class="article-image" src="{{ product.thumbnail.src }}" alt="">
     <div class="article-description">
         <span class="article-type">{{ product.custom.type }}</span>
@@ -6,3 +7,4 @@
         <span class="article-price">{{ product.custom.price }}</span>
     </div>
 </article>
+{% endif %}

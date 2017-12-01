@@ -7,17 +7,9 @@
 	<hr class="section-stroke">
 	<h2 class="section-title">Articles populaires</h2>
 	<div class="articles-grid">
-		{% for i in 0..4 %}
-		{# TODO: Add "has-promo" class if has promo category#}
-		<article class="article has-promo">
-			<img class="article-image" src="{{ theme.link }}/dist/img/miyasaki.jpeg" alt="">
-			<div class="article-description">
-				<span class="article-type">T-shirt</span>
-				<span class="article-name">Studio Ghibli - Totoro</span>
-				<span class="article-price">14,99€</span>
-			</div>
-		</article>
-		{% endfor %}
+        {% for product in products %}
+            {% include './includes/famous_products.twig' %}
+        {% endfor %}
 	</div>
 </section>
 
