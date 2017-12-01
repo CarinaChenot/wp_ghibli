@@ -1,4 +1,4 @@
-<div class="movie-card">
+<a href="{{ film.link }}" class="movie-card">
   <div class="card-cover-container">
     <img class="card-cover" src="{{ film.thumbnail.src }}" alt="">
   </div>
@@ -10,4 +10,4 @@
         {% endfor %}</span>
     <span class="card-year">{{ film.terms('year')[0].name }}</span>
   </div>
-</div>
+</a>
