@@ -51,38 +51,7 @@
 			{{ section.post_content }}
 		</p>
 
-		{% if section.template == 'univers' %}
-			<a class="cta" href="">Voir tous les films</a>
-		{% endif %}
-
 		{% include './includes/about_media/media_'~section.template~'.twig' %}
 	</section>
 {% endfor %}
-
-
-<section class="topic">
-	<h2 class="topic-title">Musique</h2>
-	<p class="topic-paragraph">
-		L’élément essentiel du succès du Studio Ghibli reste la musique, composé par Mamoru Fujisawa, plus connu sous le nom de Joe Hisaishi est chef d’orchestre, pianiste et parolier. Pour le Studio Ghibli, il a créé les musiques de Nausicaa de la Vallée du Vent (1984), Le Château dans le Ciel (1986), Mon Voisin Totoro (1988), Kiki la Petite Sorcière (1989), Porco Rosso (1992), Princesse Mononoké (1997), Le Voyage de Chihiro (2001) et bien d’autres. Ses mélodies d’une profondeur et d’une intensité rares transportent et enveloppent l’âme du Studio Ghibli d’un duvet chaud et doux…
-	</p>
-	<a class="cta" href="">Découvrir Joe Hisaishi</a>
-	<div>
-		<iframe width="854" height="480" src="https://www.youtube.com/embed/eY1XtWyKlJA" frameborder="0" gesture="media" allowfullscreen></iframe>
-	</div>
-</section>
-
-<section class="topic museum dark">
-	<h2 class="topic-title">Musée</h2>
-	<p class="topic-paragraph">
-		Le Musée d'art Ghibli est consacré au studio d'animation japonais éponyme, situé à l'orée du parc Inokashira de la ville de Mitaka, dans la banlieue ouest de Tokyo. Ouvert depuis 2001, il retrace les coulisses des célèbres créations et réalisations du studio tels que Le voyage de Chihiro et Mon voisin Totoro.  Il est accessible par train depuis le centre de Tokyo et nécessite une réservation à l'avance pour pouvoir le visiter. Il présente en plus des expositions, un café, un magasin, un toit végétal et une salle de cinéma.
-	</p>
-	<a class="cta" href="">Découvrir le musée</a>
-	<div class="topic-media museum-gallery">
-		<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
-		<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
-		<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
-		<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
-	</div>
-</section>
-
 {% endblock %}
