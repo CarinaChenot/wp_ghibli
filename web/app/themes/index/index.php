@@ -1,6 +1,6 @@
 <?php
 
-echo 'Faut faire cette putain de 404';
+echo 'index';
 
 //$context = Timber::get_context();
 //
