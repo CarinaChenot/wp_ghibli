@@ -1,13 +1,13 @@
 <section class="pagination">
   {% if films.pagination.prev %}
-    <a class="pagination-left" href="">{% include '/dist/img/right-arrow.svg.twig' %}</a>
+    <a class="pagination-left" href="{{ films.pagination.prev.link }}">{% include '/dist/img/right-arrow.svg.twig' %}</a>
   {% endif %}
   <ul class="pagination-list">
     {% for page in films.pagination.pages %}
-      <li><a class="pagination-number {{page.class}}" href="{{page.link}}">{{page.title}}</a></li>
+      <li><a class="pagination-number {{ page.class }}" href="{{ page.link }}">{{ page.title }}</a></li>
     {% endfor %}
   </ul>
   {% if films.pagination.next %}
-    <a class="pagination-right" href="">{% include '/dist/img/right-arrow.svg.twig' %}</a>
+    <a class="pagination-right" href="{{ films.pagination.next.link }}">{% include '/dist/img/right-arrow.svg.twig' %}</a>
   {% endif %}
 </section>

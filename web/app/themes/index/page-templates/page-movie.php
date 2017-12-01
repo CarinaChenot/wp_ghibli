@@ -3,8 +3,10 @@
 Template Name: Page Movie
 */
 
+global $paged;
+
 if (!isset($paged) || !$paged){
-    $paged = 1;
+	$paged = 1;
 }
 
 $context = Timber::get_context();
