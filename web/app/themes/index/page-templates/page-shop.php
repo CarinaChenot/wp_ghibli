@@ -19,5 +19,4 @@ $args = array(
 $context['post'] = new \Timber\Post();
 $context['products'] = new \Timber\PostQuery($args);
 
-//dump($context);
 Timber::render('views/pages/shop.twig', $context);
