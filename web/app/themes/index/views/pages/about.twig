@@ -45,47 +45,20 @@
 	<span class="quote-author">Hayao Miyazaki</span>
 </section>
 
-<section class="topic origins">
-	<h2 class="topic-title">{{ TimberPost(section_1).post_title }}</h2>
-	<p class="topic-paragraph">
-		Le studio existait depuis longtemps dans l'esprit de Hayao Miyazaki et Isao Takahata, deux visionnaires qui ont su rester fidèles à leurs principes. L’histoire du studio Ghibli commence en réalité à la fin des années 50. Isao Takahata entre au studio Tôei Dôga (futur Tôei Animation) en 1959 et Hayao Miyazaki en 1963. Tous deux appartiennent au même syndicat, Takahata en étant le vice-président et Miyazaki le secrétaire général. Après la réalisation de Taiyô no Ôji : Horusu no Daibôken (Horus, prince du soleil), tous deux quittent la Tôei et intègrent un autre studio, où Takahata est réalisateur et Miyazaki est chargé de la conception scénique
-	</p>
-	<div class="topic-media founders">
-		<h3 class="topic-subtitle">Découvrir les fondateurs</h3>
-		<div class="founder">
-			<div class="fake-pic"></div>
-			<div class="founder-legend">
-				<hr class="stroke">
-				<span class="founder-name">Isao Takahata</span>
-				<span class="founder-role">Réalisateur</span>
-			</div>
-		</div>
-		<div class="founder">
-			<div class="fake-pic"></div>
-			<div class="founder-legend">
-				<hr class="stroke">
-				<span class="founder-name">Isao Takahata</span>
-				<span class="founder-role">Réalisateur</span>
-			</div>
-		</div>
-	</div>
-</section>
+{% for section in sections %}
+	<section class="topic {{ section.class }}">
+		<h2 class="topic-title">{{ section.post_title }}</h2>
+		<p class="topic-paragraph">
+			{{ section.post_content }}
+		</p>
 
-<section class="topic dark">
-	<h2 class="topic-title">Univers</h2>
-	<p class="topic-paragraph">
-		S’il est un thème important à retenir dans les films du Studio Ghibli, c’est certainement celui de l’environnement ! Les arbres y sont omniprésents et les paysages grandioses ! Partout, l’homme doit apprendre à vivre en accord avec la nature. Il doit trouver sa place au sein d’un espace magique et empreint de mysticisme. Et surtout, il ne doit pas renverser cet équilibre fragile… Sous peine de connaître un triste sort, comme l’on peut le constater dans Princesse Mononoké (1997) ou Nausicaa et la vallée du vent (1984). Les explosions, qui ne sont pas sans rappeler celles de Nagasaki et d’Hiroshima, sont d’ailleurs fréquentes dans les films de Ghibli, car le Japon sait d’où il vient…
-	</p>
-	<a class="cta" href="">Voir tous les films</a>
-	<div class="topic-media universe-gallery">
-		<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
-		<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
-		<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
-		<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
-		<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
-		<div class="gallery-image" style="background-image: url('{{ theme.uri }}/dist/img/ghibli_museum.jpg');"></div>
-	</div>
-</section>
+		{% if section.template == 'univers' %}
+			<a class="cta" href="">Voir tous les films</a>
+		{% endif %}
+
+		{% include './includes/about_media/media_'~section.template~'.twig' %}
+	</section>
+{% endfor %}
 
 
 <section class="topic">
