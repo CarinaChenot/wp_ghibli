@@ -17,9 +17,6 @@
 .studio-image
   width 100%
 
-  img
-    width 100%
-
 .studio-content
   padding 0 13vw
   height 100%
@@ -54,6 +51,12 @@
   right site-margin
   background-color blue
   position absolute
+
+  &.anim
+    transform translate(0, 60%)
+
+  &.fade
+    transform translate(0, 50%)
 
   +max(small)
     padding 1em

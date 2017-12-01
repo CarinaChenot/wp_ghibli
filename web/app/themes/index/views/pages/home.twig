@@ -9,7 +9,7 @@
 		<a class="hero-cta anim" href="{{ site.url }}/a-propos">Découvrir l'univers</a>
 	</section>
 
-	<section class="quote">
+	<section class="quote anim">
 		{% include '/dist/img/quote.svg.twig' %}
 		<p class="quote-text anim">
 			{{ post.quote }}
@@ -22,10 +22,10 @@
 	{% include './includes/recent_movies.twig' %}
 
 	<section class="studio">
-		<img class="studio-image" src="{{ TimberImage(post.studio_image) }}">
-		<div class="studio-content">
+		<img class="studio-image anim" src="{{ TimberImage(post.studio_image) }}">
+		<div class="studio-content anim">
 			{{ post.content }}
-			<a href="{{ page_about.link }}" class="btn-scale studio-cta">
+			<a href="{{ page_about.link }}" class="btn-scale studio-cta anim">
 				<span class="studio-cta-text">À propos de nous</span>
 					{% include '/dist/img/right-arrow.svg.twig' %}
 			</a>

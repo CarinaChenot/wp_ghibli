@@ -1,13 +1,13 @@
 <section class="recent-movies">
-	<hr class="section-stroke">
-	<h2 class="section-title">Œuvres récentes</h2>
+	<hr class="section-stroke anim">
+	<h2 class="section-title anim">Œuvres récentes</h2>
 
 	{% for movie in latest_movies %}
 	<div class="movie">
-		<h3 class="movie-title">{{ movie.post_title}}</h3>
-		<span class="movie-year">{{ movie.terms('year')[0].name }}</span>
-		<p class="movie-excerpt">{{ movie.post_excerpt }}</p>
-		<div class="movie-image-wrapper">
+		<h3 class="movie-title anim">{{ movie.post_title}}</h3>
+		<span class="movie-year anim">{{ movie.terms('year')[0].name }}</span>
+		<p class="movie-excerpt anim">{{ movie.post_excerpt }}</p>
+		<div class="movie-image-wrapper anim">
 			{% if movie.illustration_1 %}
 			<div class="movie-image-container">
 				<img class="movie-image" src="{{ TimberImage(movie.illustration_1) }}" alt="" width="100%">
@@ -21,6 +21,6 @@
 	</div>
 	{% endfor %}
 
-	<a href="#" class="cta">Voir tous les films</a>
+	<a href="#" class="cta anim">Voir tous les films</a>
 
 </section>

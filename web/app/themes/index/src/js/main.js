@@ -3,8 +3,11 @@ IntersectionObserver.prototype.POLL_INTERVAL = 100
 function onIntersect(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      console.log(entry.target)
       entry.target.classList.add('fade')
+
+      setInterval(() => {
+        entry.target.classList.remove('anim')
+      }, 700)
     }
   })
 }

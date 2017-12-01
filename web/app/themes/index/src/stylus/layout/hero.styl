@@ -28,8 +28,11 @@
 
 .hero-cta
   opacity 0
-  transition transform 0.6s ease-in-out 0.3s
+  transition all 0.6s ease-in-out 0.3s
   transform translateY(10px)
+
+  &:not(.anim)
+    transition all 0.3s ease-in-out 0s
 
   +max(small)
     padding 1em 1.2em
@@ -38,3 +41,4 @@
   &.fade
     opacity 1
     transform translateY(0px)
+    // transition transform 0.3s ease-in-out 0s

@@ -1,7 +1,7 @@
 <section class="famous-movies">
-	<hr class="section-stroke">
-	<h2 class="section-title">Œuvres populaires</h2>
-	<div class="movies-grid">
+	<hr class="section-stroke anim">
+	<h2 class="section-title anim">Œuvres populaires</h2>
+	<div class="movies-grid anim">
 		{% for movie in famous_movies %}
 		<div class="movie-item" style="background-image: url('{{ movie.thumbnail.src }}')">
 			<div class="movie-content">
