@@ -18,18 +18,9 @@
 
 .hero-logo
   width 100%
-  opacity 0
-  transition all 0.6s ease-in-out
-  transform translateY(10px)
-
-  &.fade
-    opacity 1
-    transform translateY(0px)
 
 .hero-cta
-  opacity 0
-  transition all 0.6s ease-in-out 0.3s
-  transform translateY(10px)
+  transition-delay 0.3s
 
   &:not(.anim)
     transition all 0.3s ease-in-out 0s
@@ -37,8 +28,3 @@
   +max(small)
     padding 1em 1.2em
     text-align center
-
-  &.fade
-    opacity 1
-    transform translateY(0px)
-    // transition transform 0.3s ease-in-out 0s
